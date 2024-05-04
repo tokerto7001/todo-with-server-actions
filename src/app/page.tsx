@@ -17,7 +17,7 @@ export default async function Home({searchParams}: HomeProps) {
   });
 
   return (
-    <div className="flex w-1/2 mx-auto mt-6">
+    <div className="flex w-1/2 mx-auto mt-6 gap-8">
       <TodoList todos={todos} />
       <CreateTodoForm />
     </div>

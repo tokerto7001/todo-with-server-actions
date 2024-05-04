@@ -18,7 +18,7 @@ export default function TodoList({todos}: TodoListProps){
     }
 
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto flex flex-col gap-3">
             {
                 todos.map((todo) => (
                     <TodoElement key={todo.id} todo={todo} />

@@ -5,7 +5,7 @@ import * as actions from '@/actions';
 import { useFormState } from "react-dom";
 import { useEffect, useRef } from "react";
 import { redirect } from "next/navigation";
-import FormButton from "./formButton";
+import FormButton from "./form-button";
 
 export default function CreateTodoForm(){
     const {isOpen, onOpen, onOpenChange, onClose} = useDisclosure();
@@ -24,7 +24,7 @@ export default function CreateTodoForm(){
 
     return (
             <>
-              <Button onPress={onOpen} color="secondary">Open Modal</Button>
+              <Button onPress={onOpen} color="secondary">Create Todo</Button>
               <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
                 <ModalContent>
                   {(onClose) => (
