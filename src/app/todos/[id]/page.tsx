@@ -24,7 +24,7 @@ export default async function Todo({params}: TodoProps){
     if(!todo) return notFound();
 
     return (
-        <div className="w-1/2 ml-8 mt-10 flex gap-10">
+        <div className="w-1/2 ml-8 mt-10 flex gap-10 max-md:flex-col">
             <UpdateTodoForm todo={todo} />
             <UpdateTodoStatusForm isCompleted={todo.isCompleted} id={todo.id} />
         </div>

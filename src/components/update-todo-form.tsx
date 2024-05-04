@@ -16,13 +16,14 @@ export default function UpdateTodoForm({ todo }: UpdateTodoFormProps) {
   );
 
   return (
-    <div className="w-96 flex flex-col">
+    <div className="w-96 flex flex-col container">
       <form action={action}>
         <Input
           name="todo"
           label="Todo"
           placeholder="Todo"
           defaultValue={todo.todo}
+          className="max-md:w-[80%]"
         />
         {formState.errors.todo ? (
           <div className="text-red-900">{formState.errors.todo.join(", ")}</div>
