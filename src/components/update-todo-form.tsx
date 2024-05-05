@@ -4,6 +4,7 @@ import { Button, Input } from "@nextui-org/react";
 import { Todos } from "@prisma/client";
 import { useFormState } from "react-dom";
 import * as actions from "@/actions";
+import FormButton from "./form-button";
 
 interface UpdateTodoFormProps {
   todo: Todos;
@@ -31,9 +32,9 @@ export default function UpdateTodoForm({ todo }: UpdateTodoFormProps) {
         {formState.errors._form ? (
           <div className="text-red-900">{formState.errors._form.join(", ")}</div>
         ) : null}
-        <Button className="w-48 mt-5" color="primary" type="submit">
+        <FormButton className="w-48 mt-5">
           Update Todo
-        </Button>
+        </FormButton>
       </form>
     </div>
   );
