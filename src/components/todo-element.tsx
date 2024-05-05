@@ -2,6 +2,7 @@ import { Button } from "@nextui-org/react"
 import { Todos } from "@prisma/client"
 import Link from "next/link"
 import * as actions from '@/actions'
+import FormButton from "./form-button"
 
 
 interface TodoElementProps {
@@ -17,7 +18,7 @@ export default function TodoElement({ todo }: TodoElementProps){
             <div>{todo.isCompleted ? 'Completed' : 'UnCompleted'}</div>
             <div>{todo.createdAt.toDateString()}</div>
             <form action={deleteTodoAction}>
-                <Button color="danger" type="submit">Delete</Button>
+                <FormButton className="bg-red-600">Delete</FormButton>
             </form>
         </Link>
     )
