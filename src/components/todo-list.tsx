@@ -3,11 +3,15 @@ import TodoElement from "./todo-element";
 import { Todos } from "@prisma/client";
 
 interface TodoListProps {
-    todos: Todos[]
+    page: number
 }
 
-export default function TodoList({todos}: TodoListProps){
+export default async function TodoList({page}: TodoListProps){
 
+    const todos = await db.todos.findMany({
+        take: 10,
+        skip: (page - 1) * 10,
+      });
 
     if(!todos.length) {
         return (
